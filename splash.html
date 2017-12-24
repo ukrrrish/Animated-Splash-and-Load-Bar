@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+ <title>Splach</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="others/font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="styles/animate.css">
+	<script src="scripts/jquery.min.js"></script>
+	<script>
+	$( document ).ready(function() {
+    animation();
+	
+	setInterval(function(){ animation() }, 900);	
+
+    function animation() {
+    switch (Math.floor((Math.random() * 6) + 1)) {
+    case 0:
+        $("#fountimage").attr('class', 'fa fa-hospital-o fa-4x animated infinite fadeOutUp');
+        break;
+    case 1:
+	   $("#fountimage").attr('class', 'fa fa-fighter-jet fa-4x animated infinite zoomOutRight');      
+        break;
+    case 2:
+      $("#fountimage").attr('class', 'fa fa-shopping-cart fa-4x animated infinite slideInLeft');
+        break;
+    case 3:
+        $("#fountimage").attr('class', 'fa fa-beer fa-4x animated infinite tada');
+        break;
+    case 4:
+       $("#fountimage").attr('class', 'fa fa fa-ticket fa-4x animated infinite jackInTheBox');
+        break;
+    case 5:
+          $("#fountimage").attr('class', 'fa fa-ship fa-4x animated infinite zoomIn');
+        break;
+    case 6:
+         $("#fountimage").attr('class', 'fa fa-cutlery fa-4x animated infinite rotateIn');
+		 break;
+    };            
+    }
+    });
+	 
+	</script>
+</head>
+<body style="background-color:rgb(29, 157, 116)">
+<div style="position: absolute;top: 50%; left: 50%;margin-top: -50px;margin-left: -50px;width: 100px;height: 100px;">
+<i id="fountimage" style="color:white" aria-hidden="true"></i>
+<h2 class="text-center" style="color:#ddd" >Near Me </h2>
+<i class="text-center animated infinite flash" style="color:#ddd" >loading ... </i>
+</div>
+ </body>
+</html>
